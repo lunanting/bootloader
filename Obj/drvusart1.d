@@ -1,0 +1,12 @@
+.\Obj\drvusart1.o: SOFTWARE\Driver\DrvUsart1.c
+.\Obj\drvusart1.o: C:\Keil\ARM\RV31\Inc\string.h
+.\Obj\drvusart1.o: SOFTWARE\Driver\DrvUsart1.h
+.\Obj\drvusart1.o: .\SOFTWARE\FWLib\INC\stm32f10x_usart.h
+.\Obj\drvusart1.o: .\SOFTWARE\FWLib\INC\stm32f10x_map.h
+.\Obj\drvusart1.o: .\SOFTWARE\FWLib\INC\stm32f10x_conf.h
+.\Obj\drvusart1.o: .\SOFTWARE\FWLib\INC\stm32f10x_type.h
+.\Obj\drvusart1.o: .\SOFTWARE\FWLib\INC\cortexm3_macro.h
+.\Obj\drvusart1.o: .\SOFTWARE\FWLib\INC\stm32f10x_gpio.h
+.\Obj\drvusart1.o: .\SOFTWARE\FWLib\INC\stm32f10x_rcc.h
+.\Obj\drvusart1.o: .\SOFTWARE\FWLib\INC\stm32f10x_nvic.h
+.\Obj\drvusart1.o: .\SOFTWARE\BSP\bsp.h

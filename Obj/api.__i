@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I.\SOFTWARE\APP -I.\SOFTWARE\BSP -I.\SOFTWARE\Driver -I.\SOFTWARE\FWLib\INC -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -o ".\Obj\api.o" --omf_browse ".\Obj\api.crf" --depend ".\Obj\api.d" "SOFTWARE\Driver\Api.c"

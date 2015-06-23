@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I.\SOFTWARE\APP -I.\SOFTWARE\BSP -I.\SOFTWARE\Driver -I.\SOFTWARE\FWLib\INC -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -o ".\Obj\drvusart1.o" --omf_browse ".\Obj\drvusart1.crf" --depend ".\Obj\drvusart1.d" "SOFTWARE\Driver\DrvUsart1.c"

@@ -1,0 +1,10 @@
+.\obj\bsptime3.o: SOFTWARE\BSP\BspTime3.c
+.\obj\bsptime3.o: .\SOFTWARE\FWLib\INC\stm32f10x_tim.h
+.\obj\bsptime3.o: .\SOFTWARE\FWLib\INC\stm32f10x_map.h
+.\obj\bsptime3.o: .\SOFTWARE\FWLib\INC\stm32f10x_conf.h
+.\obj\bsptime3.o: .\SOFTWARE\FWLib\INC\stm32f10x_type.h
+.\obj\bsptime3.o: .\SOFTWARE\FWLib\INC\cortexm3_macro.h
+.\obj\bsptime3.o: .\SOFTWARE\FWLib\INC\stm32f10x_gpio.h
+.\obj\bsptime3.o: .\SOFTWARE\FWLib\INC\stm32f10x_rcc.h
+.\obj\bsptime3.o: .\SOFTWARE\FWLib\INC\stm32f10x_nvic.h
+.\obj\bsptime3.o: SOFTWARE\BSP\BspTime3.h

@@ -1,0 +1,967 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+E:\工作文档\工程调试\资料最近\stm32 bootloader\bootloader\Project.uvproj
+Project File Date:  06/19/2015
+
+<h2>Output:</h2>
+Rebuild target 'Project'
+compiling main.c...
+compiling common.c...
+compiling download.c...
+compiling ymodem.c...
+compiling bsp.c...
+compiling BspTime2.c...
+compiling BspTime3.c...
+compiling BspUsart1.c...
+compiling core_cm3.c...
+assembling stm32f10x_vector.s...
+assembling cortexm3_macro.s...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_it.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_nvic.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_iwdg.c...
+linking...
+Program Size: Code=5512 RO-data=356 RW-data=80 ZI-data=3152  
+After Build - User command #1: fromelf.exe --bin -o./output/Project.bin ./Obj/Project.axf
+After Build - User command #2: fromelf.exe --i32 -o./output/Project.hex ./Obj/Project.axf
+".\Obj\Project.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\工作文档\\工程调试\\资料最近\\stm32 bootloader\\bootloader\\Obj\\Project.axf" 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+</pre>
+</body>
+</html>
+
+SOFTWARE\APP\common.c(253): error:  #169: expected a declaration
+      }
+SOFTWARE\APP\common.c(302): warning:  #12-D: parsing restarts here after previous syntax error
+          break;
+SOFTWARE\APP\common.c(303): error:  #169: expected a declaration
+      }
+SOFTWARE\APP\common.c(305): error:  #169: expected a declaration
+  }
+SOFTWARE\APP\common.c(321): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+SOFTWARE\APP\common.c(29): warning:  #177-D: variable "FunReceEnter" was declared but never referenced
+  static FunVoidType FunReceEnter = NULL;
+SOFTWARE\APP\common.c(30): warning:  #177-D: variable "FunReceExit" was declared but never referenced
+  static FunVoidType FunReceExit = NULL;
+SOFTWARE\APP\common.c(31): warning:  #177-D: variable "FunWrite" was declared but never referenced
+  static FunWriteType FunWrite = NULL;
+SOFTWARE\APP\common.c(32): warning:  #177-D: variable "FunCurrentProcess" was declared but never referenced
+  static FunProcessType FunCurrentProcess = NULL;
+SOFTWARE\APP\common.c(35): warning:  #177-D: variable "m_ProgramAddr" was declared but never referenced
+  static u32 m_ProgramAddr = ApplicationAddress;
+SOFTWARE\APP\common.c(56): warning:  #177-D: function "Print" was declared but never referenced
+  static void Print(u8 *str)
+SOFTWARE\APP\common.c(74): warning:  #177-D: function "ReceOneChar" was declared but never referenced
+  static void ReceOneChar(u8 ReceCharacter)
+SOFTWARE\APP\common.c(94): warning:  #177-D: function "TimEndHandle" was declared but never referenced
+  static void TimEndHandle(void)
+SOFTWARE\APP\common.c: 13 warnings, 9 errors
+compiling download.c...
+compiling ymodem.c...
+compiling bsp.c...
+compiling BspTime2.c...
+compiling BspTime3.c...
+compiling BspUsart1.c...
+compiling core_cm3.c...
+assembling stm32f10x_vector.s...
+assembling cortexm3_macro.s...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_it.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_nvic.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_iwdg.c...
+".\Obj\Project.axf" - 9 Error(s), 13 Warning(s).
+Target not created
+Load "E:\\工作文档\\工程调试\\资料最近\\stm32 bootloader\\bootloader\\Obj\\Project.axf" 
+_____^
+*** error 56: cannot open file
+Error: Flash Download failed  -  Could not load file 'E:\工作文档\工程调试\资料最近\stm32 bootloader\bootloader\Obj\Project.axf'
+ifier "FunctionalState" is undefined
+  void RCC_APB1PeriphResetCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_BackupResetCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+SOFTWARE\APP\common.c(60): error:  #20: identifier "TRUE" is undefined
+      while (BspUsart1Send(str, len) != TRUE);
+SOFTWARE\APP\common.c(311): error:  #20: identifier "DISABLE" is undefined
+        RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, DISABLE);   //关 使能PA端口时钟
+SOFTWARE\APP\common.c: 0 warnings, 24 errors
+compiling download.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(193): error:  #20: identifier "FunctionalState" is undefined
+  FLASH_Status FLASH_ReadOutProtection(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(197): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetReadOutProtectionStatus(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(198): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetPrefetchBufferStatus(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(199): error:  #20: identifier "FunctionalState" is undefined
+  void FLASH_ITConfig(u16 FLASH_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(200): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetFlagStatus(u16 FLASH_FLAG);
+SOFTWARE\APP\download.c(83): error:  #20: identifier "FALSE" is undefined
+              return FALSE;
+SOFTWARE\APP\download.c(87): error:  #20: identifier "TRUE" is undefined
+      return TRUE;
+SOFTWARE\APP\download.c: 0 warnings, 7 errors
+compiling ymodem.c...
+SOFTWARE\APP\ymodem.c(140): error:  #20: identifier "FALSE" is undefined
+          return FALSE;           //接收到结束标志
+SOFTWARE\APP\ymodem.c(144): error:  #20: identifier "FALSE" is undefined
+          return FALSE;           //接收到中止标志 ctrl + c
+SOFTWARE\APP\ymodem.c(149): error:  #20: identifier "FALSE" is undefined
+              return FALSE; 
+SOFTWARE\APP\ymodem.c(175): error:  #20: identifier "TRUE" is undefined
+      return TRUE;
+SOFTWARE\APP\ymodem.c(189): error:  #20: identifier "TRUE" is undefined
+      while(TRUE != SendString(&ch, 1));
+SOFTWARE\APP\ymodem.c(249): error:  #20: identifier "TRUE" is undefined
+          case TRUE:                      //接收正确
+SOFTWARE\APP\ymodem.c(302): error:  #20: identifier "TRUE" is undefined
+          case TRUE:                      //接收正确
+SOFTWARE\APP\ymodem.c: 0 warnings, 7 errors
+compiling bsp.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(31): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState NVIC_IRQChannelCmd;
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(265): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetIRQChannelPendingBitStatus(u8 NVIC_IRQChannel);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(269): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetIRQChannelActiveBitStatus(u8 NVIC_IRQChannel);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void NVIC_SystemLPConfig(u8 LowPowerMode, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void NVIC_SystemHandlerConfig(u32 SystemHandler, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(278): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetSystemHandlerPendingBitStatus(u32 SystemHandler);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(281): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetSystemHandlerActiveBitStatus(u32 SystemHandler);
+.\SOFTWARE\FWLib\INC\stm32f10x_gpio.h(231): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_EventOutputCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_gpio.h(232): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_PinRemapConfig(u32 GPIO_Remap, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(255): error:  #20: identifier "ErrorStatus" is undefined
+  ErrorStatus RCC_WaitForHSEStartUp(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(257): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_HSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(259): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_PLLCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ITConfig(u8 RCC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(269): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_LSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_RTCCLKCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(273): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_AHBPeriphClockCmd(u32 RCC_AHBPeriph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphClockCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphResetCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(277): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphResetCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_BackupResetCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_iwdg.h(65): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus IWDG_GetFlagStatus(u16 IWDG_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_systick.h(58): error:  #20: identifier "FunctionalState" is undefined
+  void SysTick_ITConfig(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_systick.h(60): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus SysTick_GetFlagStatus(u8 SysTick_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(193): error:  #20: identifier "FunctionalState" is undefined
+  FLASH_Status FLASH_ReadOutProtection(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(197): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetReadOutProtectionStatus(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(198): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetPrefetchBufferStatus(void);
+SOFTWARE\BSP\bsp.c: 0 warnings, 30 errors
+compiling BspTime2.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(688): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(689): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_CtrlPWMOutputs(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(690): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_ITConfig(TIM_TypeDef* TIMx, u16 TIM_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(693): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_DMACmd(TIM_TypeDef* TIMx, u16 TIM_DMASource, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(713): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_ARRPreloadConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(714): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_SelectCOM(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(715): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_SelectCCDMA(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(716): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_CCPreloadControl(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(739): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_UpdateDisableConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(741): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_SelectHallSensor(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(763): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus TIM_GetFlagStatus(TIM_TypeDef* TIMx, u16 TIM_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(765): error:  #20: identifier "ITStatus" is undefined
+  ITStatus TIM_GetITStatus(TIM_TypeDef* TIMx, u16 TIM_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_gpio.h(231): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_EventOutputCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_gpio.h(232): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_PinRemapConfig(u32 GPIO_Remap, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(255): error:  #20: identifier "ErrorStatus" is undefined
+  ErrorStatus RCC_WaitForHSEStartUp(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(257): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_HSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(259): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_PLLCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ITConfig(u8 RCC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(269): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_LSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_RTCCLKCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(273): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_AHBPeriphClockCmd(u32 RCC_AHBPeriph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphClockCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphResetCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(277): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphResetCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_BackupResetCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(31): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState NVIC_IRQChannelCmd;
+SOFTWARE\BSP\BspTime2.c: 0 warnings, 30 errors
+compiling BspTime3.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(688): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(689): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_CtrlPWMOutputs(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(690): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_ITConfig(TIM_TypeDef* TIMx, u16 TIM_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(693): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_DMACmd(TIM_TypeDef* TIMx, u16 TIM_DMASource, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(713): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_ARRPreloadConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(714): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_SelectCOM(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(715): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_SelectCCDMA(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(716): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_CCPreloadControl(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(739): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_UpdateDisableConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(741): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_SelectHallSensor(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(763): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus TIM_GetFlagStatus(TIM_TypeDef* TIMx, u16 TIM_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(765): error:  #20: identifier "ITStatus" is undefined
+  ITStatus TIM_GetITStatus(TIM_TypeDef* TIMx, u16 TIM_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_gpio.h(231): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_EventOutputCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_gpio.h(232): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_PinRemapConfig(u32 GPIO_Remap, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(255): error:  #20: identifier "ErrorStatus" is undefined
+  ErrorStatus RCC_WaitForHSEStartUp(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(257): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_HSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(259): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_PLLCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ITConfig(u8 RCC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(269): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_LSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_RTCCLKCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(273): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_AHBPeriphClockCmd(u32 RCC_AHBPeriph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphClockCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphResetCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(277): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphResetCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_BackupResetCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(31): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState NVIC_IRQChannelCmd;
+SOFTWARE\BSP\BspTime3.c: 0 warnings, 30 errors
+compiling BspUsart1.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(231): error:  #20: identifier "FunctionalState" is undefined
+  void USART_Cmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(232): error:  #20: identifier "FunctionalState" is undefined
+  void USART_ITConfig(USART_TypeDef* USARTx, u16 USART_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(233): error:  #20: identifier "FunctionalState" is undefined
+  void USART_DMACmd(USART_TypeDef* USARTx, u16 USART_DMAReq, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(236): error:  #20: identifier "FunctionalState" is undefined
+  void USART_ReceiverWakeUpCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(238): error:  #20: identifier "FunctionalState" is undefined
+  void USART_LINCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(244): error:  #20: identifier "FunctionalState" is undefined
+  void USART_SmartCardCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(245): error:  #20: identifier "FunctionalState" is undefined
+  void USART_SmartCardNACKCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(246): error:  #20: identifier "FunctionalState" is undefined
+  void USART_HalfDuplexCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(248): error:  #20: identifier "FunctionalState" is undefined
+  void USART_IrDACmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(249): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus USART_GetFlagStatus(USART_TypeDef* USARTx, u16 USART_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(251): error:  #20: identifier "ITStatus" is undefined
+  ITStatus USART_GetITStatus(USART_TypeDef* USARTx, u16 USART_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_gpio.h(231): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_EventOutputCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_gpio.h(232): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_PinRemapConfig(u32 GPIO_Remap, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(255): error:  #20: identifier "ErrorStatus" is undefined
+  ErrorStatus RCC_WaitForHSEStartUp(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(257): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_HSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(259): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_PLLCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ITConfig(u8 RCC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(269): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_LSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_RTCCLKCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(273): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_AHBPeriphClockCmd(u32 RCC_AHBPeriph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphClockCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphResetCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(277): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphResetCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_BackupResetCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(31): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState NVIC_IRQChannelCmd;
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(265): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetIRQChannelPendingBitStatus(u8 NVIC_IRQChannel);
+SOFTWARE\BSP\BspUsart1.c: 0 warnings, 30 errors
+compiling core_cm3.c...
+assembling stm32f10x_vector.s...
+assembling cortexm3_macro.s...
+compiling stm32f10x_flash.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(193): error:  #20: identifier "FunctionalState" is undefined
+  FLASH_Status FLASH_ReadOutProtection(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(197): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetReadOutProtectionStatus(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(198): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetPrefetchBufferStatus(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(199): error:  #20: identifier "FunctionalState" is undefined
+  void FLASH_ITConfig(u16 FLASH_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_flash.h(200): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetFlagStatus(u16 FLASH_FLAG);
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(537): error:  #20: identifier "FunctionalState" is undefined
+  FLASH_Status FLASH_ReadOutProtection(FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(566): error:  #20: identifier "DISABLE" is undefined
+        if(NewState != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(689): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetReadOutProtectionStatus(void)
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(691): error:  #20: identifier "FlagStatus" is undefined
+    FlagStatus readoutstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(691): error:  #20: identifier "RESET" is undefined
+    FlagStatus readoutstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(695): error:  #20: identifier "SET" is undefined
+      readoutstatus = SET;
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(711): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetPrefetchBufferStatus(void)
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(713): error:  #20: identifier "FlagStatus" is undefined
+    FlagStatus bitstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(713): error:  #20: identifier "RESET" is undefined
+    FlagStatus bitstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(717): error:  #20: identifier "SET" is undefined
+      bitstatus = SET;
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(738): error:  #20: identifier "FunctionalState" is undefined
+  void FLASH_ITConfig(u16 FLASH_IT, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(744): error:  #20: identifier "DISABLE" is undefined
+    if(NewState != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(769): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus FLASH_GetFlagStatus(u16 FLASH_FLAG)
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(771): error:  #20: identifier "FlagStatus" is undefined
+    FlagStatus bitstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(771): error:  #20: identifier "RESET" is undefined
+    FlagStatus bitstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(780): error:  #20: identifier "SET" is undefined
+        bitstatus = SET;
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c(791): error:  #20: identifier "SET" is undefined
+        bitstatus = SET;
+SOFTWARE\FWLib\LIB\stm32f10x_flash.c: 0 warnings, 22 errors
+compiling stm32f10x_gpio.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_gpio.h(231): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_EventOutputCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_gpio.h(232): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_PinRemapConfig(u32 GPIO_Remap, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(255): error:  #20: identifier "ErrorStatus" is undefined
+  ErrorStatus RCC_WaitForHSEStartUp(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(257): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_HSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(259): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_PLLCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ITConfig(u8 RCC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(269): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_LSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_RTCCLKCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(273): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_AHBPeriphClockCmd(u32 RCC_AHBPeriph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphClockCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphResetCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(277): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphResetCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_BackupResetCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+SOFTWARE\FWLib\LIB\stm32f10x_gpio.c(59): error:  #20: identifier "ENABLE" is undefined
+        RCC_APB2PeriphResetCmd(RCC_APB2Periph_GPIOA, ENABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_gpio.c(60): error:  #20: identifier "DISABLE" is undefined
+        RCC_APB2PeriphResetCmd(RCC_APB2Periph_GPIOA, DISABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_gpio.c(109): error:  #20: identifier "ENABLE" is undefined
+    RCC_APB2PeriphResetCmd(RCC_APB2Periph_AFIO, ENABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_gpio.c(110): error:  #20: identifier "DISABLE" is undefined
+    RCC_APB2PeriphResetCmd(RCC_APB2Periph_AFIO, DISABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_gpio.c(473): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_EventOutputCmd(FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_gpio.c(516): error:  #20: identifier "FunctionalState" is undefined
+  void GPIO_PinRemapConfig(u32 GPIO_Remap, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_gpio.c(546): error:  #20: identifier "DISABLE" is undefined
+    if (NewState != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_gpio.c: 0 warnings, 24 errors
+compiling stm32f10x_it.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(29): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState ADC_ScanConvMode; 
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(30): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState ADC_ContinuousConvMode;
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(264): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_Cmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_DMACmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(266): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_ITConfig(ADC_TypeDef* ADCx, u16 ADC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(268): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus ADC_GetResetCalibrationStatus(ADC_TypeDef* ADCx);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(270): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus ADC_GetCalibrationStatus(ADC_TypeDef* ADCx);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_SoftwareStartConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(272): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus ADC_GetSoftwareStartConvStatus(ADC_TypeDef* ADCx);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_DiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_ExternalTrigConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_AutoInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(280): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_InjectedDiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(282): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_ExternalTrigInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(283): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_SoftwareStartInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(284): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus ADC_GetSoftwareStartInjectedConvCmdStatus(ADC_TypeDef* ADCx);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(292): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_TempSensorVrefintCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(293): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus ADC_GetFlagStatus(ADC_TypeDef* ADCx, u8 ADC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(295): error:  #20: identifier "ITStatus" is undefined
+  ITStatus ADC_GetITStatus(ADC_TypeDef* ADCx, u16 ADC_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_bkp.h(109): error:  #20: identifier "FunctionalState" is undefined
+  void BKP_TamperPinCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_bkp.h(110): error:  #20: identifier "FunctionalState" is undefined
+  void BKP_ITConfig(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_bkp.h(115): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus BKP_GetFlagStatus(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_bkp.h(117): error:  #20: identifier "ITStatus" is undefined
+  ITStatus BKP_GetITStatus(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(28): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_TTCM;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(29): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_ABOM;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(30): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_AWUM;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(31): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_NART;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(32): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_RFLM;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(33): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_TXFP;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(52): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_FilterActivation;
+SOFTWARE\FWLib\LIB\stm32f10x_it.c: 0 warnings, 30 errors
+compiling stm32f10x_lib.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(29): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState ADC_ScanConvMode; 
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(30): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState ADC_ContinuousConvMode;
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(264): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_Cmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_DMACmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(266): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_ITConfig(ADC_TypeDef* ADCx, u16 ADC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(268): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus ADC_GetResetCalibrationStatus(ADC_TypeDef* ADCx);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(270): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus ADC_GetCalibrationStatus(ADC_TypeDef* ADCx);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_SoftwareStartConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(272): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus ADC_GetSoftwareStartConvStatus(ADC_TypeDef* ADCx);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_DiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_ExternalTrigConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_AutoInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(280): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_InjectedDiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(282): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_ExternalTrigInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(283): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_SoftwareStartInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(284): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus ADC_GetSoftwareStartInjectedConvCmdStatus(ADC_TypeDef* ADCx);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(292): error:  #20: identifier "FunctionalState" is undefined
+  void ADC_TempSensorVrefintCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(293): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus ADC_GetFlagStatus(ADC_TypeDef* ADCx, u8 ADC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_adc.h(295): error:  #20: identifier "ITStatus" is undefined
+  ITStatus ADC_GetITStatus(ADC_TypeDef* ADCx, u16 ADC_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_bkp.h(109): error:  #20: identifier "FunctionalState" is undefined
+  void BKP_TamperPinCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_bkp.h(110): error:  #20: identifier "FunctionalState" is undefined
+  void BKP_ITConfig(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_bkp.h(115): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus BKP_GetFlagStatus(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_bkp.h(117): error:  #20: identifier "ITStatus" is undefined
+  ITStatus BKP_GetITStatus(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(28): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_TTCM;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(29): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_ABOM;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(30): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_AWUM;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(31): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_NART;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(32): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_RFLM;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(33): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_TXFP;
+.\SOFTWARE\FWLib\INC\stm32f10x_can.h(52): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState CAN_FilterActivation;
+SOFTWARE\FWLib\LIB\stm32f10x_lib.c: 0 warnings, 30 errors
+compiling stm32f10x_nvic.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(31): error:  #20: identifier "FunctionalState" is undefined
+    FunctionalState NVIC_IRQChannelCmd;
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(265): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetIRQChannelPendingBitStatus(u8 NVIC_IRQChannel);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(269): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetIRQChannelActiveBitStatus(u8 NVIC_IRQChannel);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void NVIC_SystemLPConfig(u8 LowPowerMode, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void NVIC_SystemHandlerConfig(u32 SystemHandler, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(278): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetSystemHandlerPendingBitStatus(u32 SystemHandler);
+.\SOFTWARE\FWLib\INC\stm32f10x_nvic.h(281): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetSystemHandlerActiveBitStatus(u32 SystemHandler);
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(127): error:  #20: identifier "DISABLE" is undefined
+    if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(174): error:  #20: identifier "DISABLE" is undefined
+    NVIC_InitStruct->NVIC_IRQChannelCmd = DISABLE;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(274): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetIRQChannelPendingBitStatus(u8 NVIC_IRQChannel)
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(276): error:  #20: identifier "ITStatus" is undefined
+    ITStatus pendingirqstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(276): error:  #20: identifier "RESET" is undefined
+    ITStatus pendingirqstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(286): error:  #20: identifier "SET" is undefined
+      pendingirqstatus = SET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(346): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetIRQChannelActiveBitStatus(u8 NVIC_IRQChannel)
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(348): error:  #20: identifier "ITStatus" is undefined
+    ITStatus activeirqstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(348): error:  #20: identifier "RESET" is undefined
+    ITStatus activeirqstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(358): error:  #20: identifier "SET" is undefined
+      activeirqstatus = SET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(440): error:  #20: identifier "FunctionalState" is undefined
+  void NVIC_SystemLPConfig(u8 LowPowerMode, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(446): error:  #20: identifier "DISABLE" is undefined
+    if (NewState != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(470): error:  #20: identifier "FunctionalState" is undefined
+  void NVIC_SystemHandlerConfig(u32 SystemHandler, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(480): error:  #20: identifier "DISABLE" is undefined
+    if (NewState != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(552): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetSystemHandlerPendingBitStatus(u32 SystemHandler)
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(554): error:  #20: identifier "ITStatus" is undefined
+    ITStatus bitstatus  = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(554): error:  #20: identifier "RESET" is undefined
+    ITStatus bitstatus  = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(569): error:  #20: identifier "SET" is undefined
+      bitstatus = SET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(644): error:  #20: identifier "ITStatus" is undefined
+  ITStatus NVIC_GetSystemHandlerActiveBitStatus(u32 SystemHandler)
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(646): error:  #20: identifier "ITStatus" is undefined
+    ITStatus bitstatus  = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(646): error:  #20: identifier "RESET" is undefined
+    ITStatus bitstatus  = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c(661): error:  #20: identifier "SET" is undefined
+      bitstatus = SET;
+SOFTWARE\FWLib\LIB\stm32f10x_nvic.c: 0 warnings, 29 errors
+compiling stm32f10x_rcc.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(255): error:  #20: identifier "ErrorStatus" is undefined
+  ErrorStatus RCC_WaitForHSEStartUp(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(257): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_HSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(259): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_PLLCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ITConfig(u8 RCC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(269): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_LSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_RTCCLKCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(273): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_AHBPeriphClockCmd(u32 RCC_AHBPeriph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphClockCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphResetCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(277): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphResetCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_BackupResetCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(112): error:  #20: identifier "FlagStatus" is undefined
+  static volatile FlagStatus HSEStatus;
+KB: Unexpected type: 0
+error type>(199): error:  #20: identifier "ErrorStatus" is undefined
+  ErrorStatus RCC_WaitForHSEStartUp(void)
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(201): error:  #20: identifier "ErrorStatus" is undefined
+    ErrorStatus status = ERROR;
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(201): error:  #20: identifier "ERROR" is undefined
+    ErrorStatus status = ERROR;
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(208): error:  #20: identifier "RESET" is undefined
+    } while((HSEStatus == RESET) && (StartUpCounter != HSEStartUp_TimeOut));
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(213): error:  #20: identifier "SUCCESS" is undefined
+      status = SUCCESS;
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(261): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_HSICmd(FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(315): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_PLLCmd(FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(488): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ITConfig(u8 RCC_IT, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(494): error:  #20: identifier "DISABLE" is undefined
+    if (NewState != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(610): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_LSICmd(FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(651): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_RTCCLKCmd(FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(681): error:  #20: identifier "HSE_Value" is undefined
+        RCC_Clocks->SYSCLK_Frequency = HSE_Value;
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(698): error:  #20: identifier "RESET" is undefined
+          if ((RCC->CFGR & CFGR_PLLXTPRE_Mask) != (u32)RESET)
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c(767): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_AHBPeriphClockCmd(u32 RCC_AHBPeriph, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_rcc.c: 0 warnings, 30 errors
+compiling stm32f10x_spi.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_spi.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void SPI_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_spi.h(272): error:  #20: identifier "FunctionalState" is undefined
+  void I2S_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_spi.h(273): error:  #20: identifier "FunctionalState" is undefined
+  void SPI_I2S_ITConfig(SPI_TypeDef* SPIx, u8 SPI_I2S_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_spi.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void SPI_I2S_DMACmd(SPI_TypeDef* SPIx, u16 SPI_I2S_DMAReq, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_spi.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void SPI_SSOutputCmd(SPI_TypeDef* SPIx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_spi.h(281): error:  #20: identifier "FunctionalState" is undefined
+  void SPI_CalculateCRC(SPI_TypeDef* SPIx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_spi.h(285): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus SPI_I2S_GetFlagStatus(SPI_TypeDef* SPIx, u16 SPI_I2S_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_spi.h(287): error:  #20: identifier "ITStatus" is undefined
+  ITStatus SPI_I2S_GetITStatus(SPI_TypeDef* SPIx, u8 SPI_I2S_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(255): error:  #20: identifier "ErrorStatus" is undefined
+  ErrorStatus RCC_WaitForHSEStartUp(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(257): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_HSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(259): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_PLLCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ITConfig(u8 RCC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(269): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_LSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_RTCCLKCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(273): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_AHBPeriphClockCmd(u32 RCC_AHBPeriph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphClockCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphResetCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(277): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphResetCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_BackupResetCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+SOFTWARE\FWLib\LIB\stm32f10x_spi.c(71): error:  #20: identifier "ENABLE" is undefined
+        RCC_APB2PeriphResetCmd(RCC_APB2Periph_SPI1, ENABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_spi.c(73): error:  #20: identifier "DISABLE" is undefined
+        RCC_APB2PeriphResetCmd(RCC_APB2Periph_SPI1, DISABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_spi.c(334): error:  #20: identifier "FunctionalState" is undefined
+  void SPI_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_spi.c(340): error:  #20: identifier "DISABLE" is undefined
+    if (NewState != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_spi.c(361): error:  #20: identifier "FunctionalState" is undefined
+  void I2S_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_spi.c(367): error:  #20: identifier "DISABLE" is undefined
+    if (NewState != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_spi.c(396): error:  #20: identifier "FunctionalState" is undefined
+  void SPI_I2S_ITConfig(SPI_TypeDef* SPIx, u8 SPI_I2S_IT, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_spi.c: 0 warnings, 30 errors
+compiling stm32f10x_tim.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(688): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(689): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_CtrlPWMOutputs(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(690): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_ITConfig(TIM_TypeDef* TIMx, u16 TIM_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(693): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_DMACmd(TIM_TypeDef* TIMx, u16 TIM_DMASource, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(713): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_ARRPreloadConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(714): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_SelectCOM(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(715): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_SelectCCDMA(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(716): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_CCPreloadControl(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(739): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_UpdateDisableConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(741): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_SelectHallSensor(TIM_TypeDef* TIMx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(763): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus TIM_GetFlagStatus(TIM_TypeDef* TIMx, u16 TIM_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_tim.h(765): error:  #20: identifier "ITStatus" is undefined
+  ITStatus TIM_GetITStatus(TIM_TypeDef* TIMx, u16 TIM_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(255): error:  #20: identifier "ErrorStatus" is undefined
+  ErrorStatus RCC_WaitForHSEStartUp(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(257): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_HSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(259): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_PLLCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ITConfig(u8 RCC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(269): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_LSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_RTCCLKCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(273): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_AHBPeriphClockCmd(u32 RCC_AHBPeriph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphClockCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphResetCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(277): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphResetCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_BackupResetCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+SOFTWARE\FWLib\LIB\stm32f10x_tim.c(142): error:  #20: identifier "ENABLE" is undefined
+        RCC_APB2PeriphResetCmd(RCC_APB2Periph_TIM1, ENABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_tim.c(143): error:  #20: identifier "DISABLE" is undefined
+        RCC_APB2PeriphResetCmd(RCC_APB2Periph_TIM1, DISABLE);  
+SOFTWARE\FWLib\LIB\stm32f10x_tim.c(828): error:  #20: identifier "FunctionalState" is undefined
+  void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_tim.c: 0 warnings, 30 errors
+compiling stm32f10x_usart.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(231): error:  #20: identifier "FunctionalState" is undefined
+  void USART_Cmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(232): error:  #20: identifier "FunctionalState" is undefined
+  void USART_ITConfig(USART_TypeDef* USARTx, u16 USART_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(233): error:  #20: identifier "FunctionalState" is undefined
+  void USART_DMACmd(USART_TypeDef* USARTx, u16 USART_DMAReq, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(236): error:  #20: identifier "FunctionalState" is undefined
+  void USART_ReceiverWakeUpCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(238): error:  #20: identifier "FunctionalState" is undefined
+  void USART_LINCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(244): error:  #20: identifier "FunctionalState" is undefined
+  void USART_SmartCardCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(245): error:  #20: identifier "FunctionalState" is undefined
+  void USART_SmartCardNACKCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(246): error:  #20: identifier "FunctionalState" is undefined
+  void USART_HalfDuplexCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(248): error:  #20: identifier "FunctionalState" is undefined
+  void USART_IrDACmd(USART_TypeDef* USARTx, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(249): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus USART_GetFlagStatus(USART_TypeDef* USARTx, u16 USART_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_usart.h(251): error:  #20: identifier "ITStatus" is undefined
+  ITStatus USART_GetITStatus(USART_TypeDef* USARTx, u16 USART_IT);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(255): error:  #20: identifier "ErrorStatus" is undefined
+  ErrorStatus RCC_WaitForHSEStartUp(void);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(257): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_HSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(259): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_PLLCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(265): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ITConfig(u8 RCC_IT, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(269): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_LSICmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(271): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_RTCCLKCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(273): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_AHBPeriphClockCmd(u32 RCC_AHBPeriph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(274): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphClockCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(275): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphClockCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(276): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB2PeriphResetCmd(u32 RCC_APB2Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(277): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_APB1PeriphResetCmd(u32 RCC_APB1Periph, FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(278): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_BackupResetCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+SOFTWARE\FWLib\LIB\stm32f10x_usart.c(98): error:  #20: identifier "ENABLE" is undefined
+        RCC_APB2PeriphResetCmd(RCC_APB2Periph_USART1, ENABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_usart.c(99): error:  #20: identifier "DISABLE" is undefined
+        RCC_APB2PeriphResetCmd(RCC_APB2Periph_USART1, DISABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_usart.c(311): error:  #20: identifier "FunctionalState" is undefined
+  void USART_Cmd(USART_TypeDef* USARTx, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_usart.c(317): error:  #20: identifier "DISABLE" is undefined
+    if (NewState != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_usart.c: 0 warnings, 30 errors
+compiling stm32f10x_iwdg.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_iwdg.h(65): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus IWDG_GetFlagStatus(u16 IWDG_FLAG);
+SOFTWARE\FWLib\LIB\stm32f10x_iwdg.c(128): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus IWDG_GetFlagStatus(u16 IWDG_FLAG)
+SOFTWARE\FWLib\LIB\stm32f10x_iwdg.c(130): error:  #20: identifier "FlagStatus" is undefined
+    FlagStatus bitstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_iwdg.c(130): error:  #20: identifier "RESET" is undefined
+    FlagStatus bitstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_iwdg.c(137): error:  #20: identifier "SET" is undefined
+      bitstatus = SET;
+SOFTWARE\FWLib\LIB\stm32f10x_iwdg.c: 0 warnings, 5 errors
+".\Obj\Project.axf" - 423 Error(s), 0 Warning(s).
+Target not created
+State);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(279): error:  #20: identifier "FunctionalState" is undefined
+  void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(281): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus RCC_GetFlagStatus(u8 RCC_FLAG);
+.\SOFTWARE\FWLib\INC\stm32f10x_rcc.h(283): error:  #20: identifier "ITStatus" is undefined
+  ITStatus RCC_GetITStatus(u8 RCC_IT);
+SOFTWARE\FWLib\LIB\stm32f10x_usart.c(98): error:  #20: identifier "ENABLE" is undefined
+        RCC_APB2PeriphResetCmd(RCC_APB2Periph_USART1, ENABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_usart.c(99): error:  #20: identifier "DISABLE" is undefined
+        RCC_APB2PeriphResetCmd(RCC_APB2Periph_USART1, DISABLE);
+SOFTWARE\FWLib\LIB\stm32f10x_usart.c(311): error:  #20: identifier "FunctionalState" is undefined
+  void USART_Cmd(USART_TypeDef* USARTx, FunctionalState NewState)
+SOFTWARE\FWLib\LIB\stm32f10x_usart.c(317): error:  #20: identifier "DISABLE" is undefined
+    if (NewState != DISABLE)
+SOFTWARE\FWLib\LIB\stm32f10x_usart.c: 0 warnings, 30 errors
+compiling stm32f10x_iwdg.c...
+.\SOFTWARE\FWLib\INC\stm32f10x_iwdg.h(65): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus IWDG_GetFlagStatus(u16 IWDG_FLAG);
+SOFTWARE\FWLib\LIB\stm32f10x_iwdg.c(128): error:  #20: identifier "FlagStatus" is undefined
+  FlagStatus IWDG_GetFlagStatus(u16 IWDG_FLAG)
+SOFTWARE\FWLib\LIB\stm32f10x_iwdg.c(130): error:  #20: identifier "FlagStatus" is undefined
+    FlagStatus bitstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_iwdg.c(130): error:  #20: identifier "RESET" is undefined
+    FlagStatus bitstatus = RESET;
+SOFTWARE\FWLib\LIB\stm32f10x_iwdg.c(137): error:  #20: identifier "SET" is undefined
+      bitstatus = SET;
+SOFTWARE\FWLib\LIB\stm32f10x_iwdg.c: 0 warnings, 5 errors
+".\Obj\Project.axf" - 431 Error(s), 0 Warning(s).
+Target not created

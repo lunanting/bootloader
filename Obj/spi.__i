@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\SOFTWARE\APP -I.\SOFTWARE\BSP -I.\SOFTWARE\Driver -I.\SOFTWARE\FWLib\INC -I d:\Keil\ARM\RV31\Inc -I d:\Keil\ARM\CMSIS\Include -I d:\Keil\ARM\Inc\ST\STM32F10x -DSTM32F10X_HD -o ".\Obj\spi.o" --omf_browse ".\Obj\spi.crf" --depend ".\Obj\spi.d" "SOFTWARE\BSP\SPI.c"

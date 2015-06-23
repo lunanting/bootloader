@@ -1,0 +1,35 @@
+/******************** (C) COPYRIGHT 2008 STMicroelectronics ********************
+* File Name          : note.txt
+* Author             : MCD Application Team
+* Version            : V2.0.1
+* Date               : 01/14/2013
+* Description        : This file contains the needed steps to use the default
+*                      startup file provided by RealView Microcontroller
+*                      Development Kit(RVMDK).
+********************************************************************************
+* THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+* WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+* AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
+* INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
+* CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+* INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+*******************************************************************************/
+
+
+
+IAP 编程启动程序  
+
+    2013.1.27  第一版  
+	
+	使用方法： 
+		1,先将本程序通过jLink下载到目标板中。
+		2,现次上电前，先在超级终端中按下'C'键，然后上电，会显示操作菜单。
+		3,在按下‘1’后，进入到更新模式。
+		4,完毕后按下'2'运行程序。
+
+
+
+
+
+
+******************* (C) COPYRIGHT 2008 STMicroelectronics *****END OF FILE******

@@ -1,0 +1,9 @@
+.\Obj\bspspi1.o: SOFTWARE\BSP\BspSpi1.c
+.\Obj\bspspi1.o: SOFTWARE\BSP\BspSpi1.h
+.\Obj\bspspi1.o: .\SOFTWARE\FWLib\INC\stm32f10x_type.h
+.\Obj\bspspi1.o: .\SOFTWARE\FWLib\INC\stm32f10x_gpio.h
+.\Obj\bspspi1.o: .\SOFTWARE\FWLib\INC\stm32f10x_map.h
+.\Obj\bspspi1.o: .\SOFTWARE\FWLib\INC\stm32f10x_conf.h
+.\Obj\bspspi1.o: .\SOFTWARE\FWLib\INC\cortexm3_macro.h
+.\Obj\bspspi1.o: .\SOFTWARE\FWLib\INC\stm32f10x_rcc.h
+.\Obj\bspspi1.o: .\SOFTWARE\FWLib\INC\stm32f10x_spi.h
